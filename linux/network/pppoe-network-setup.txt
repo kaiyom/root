@@ -1,0 +1,29 @@
+
+# PPPOE Network Setup
+
+## List of all connection you have already
+nmcli con show
+
+## Create connection
+### [NOTE: 'Con1' is a connection name]
+$ nmcli con edit type pppoe con-name "Con1"
+
+## Read all properties
+print
+
+## See available sub commands
+help
+
+## Setup
+$ set pppoe.username USERNAME
+$ set pppoe.password PASSWORD
+
+### 1 is first where 10 is last, availabe 1 - 10
+$ set connection.autoconnect-priority 1
+$ save
+$ yes
+
+$ quit
+
+## Delete connection
+$ nmcli con delete "Con1"
